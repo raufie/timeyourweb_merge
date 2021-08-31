@@ -1,7 +1,7 @@
 import pandas as pd
-import numpy as np
 import re
 import uuid
+import os
 
 
 def get_domain(site):
@@ -56,12 +56,9 @@ def append_to_df(file_names):
     return df
 
 
-print("What year are you analyzing?")
-year = int(input())
-months = ["January", "February", "March",
-          "April", "May", "June", "July", "August"]
-file_names = ["Summary - " + i + " " + str(year)+".csv" for i in months]
-
+file_names = os.listdir()
+file_names.remove("script.py")
+year = file_names[0][10:]
 df = append_to_df(file_names)
 f_name = f"{year}-stats-{uuid.uuid4()}.csv"
 df.to_csv(f_name)
