@@ -10,8 +10,7 @@ It only considers the TotalTime and the csv returned has time in hours.
 
 ## How to use
 Just put all the csv files downloaded from timeyourweb extension in this folder
-Next run the script, make sure all the dependencies are resolved
-The script will ask for the year you want to merge the data of.. Put the year in and that's it. 
+Next run the script, make sure all the dependencies are resolved and only timeyourweb csv files are in the folder
 
 ## Dependencies
 
